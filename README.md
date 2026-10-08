@@ -64,15 +64,19 @@ desarrollo-software-ii-challenge1/
 
 1. Abran **Visual Studio Code**.
 2. En la barra superior, seleccionen **Terminal → New Terminal**.
-3. Escriban los siguientes comandos, uno a uno:
+3. Ejecuten:
 
 ```bash
-java --version
-javac --version
 git --version
 ```
 
-Si alguno no funciona, pidan ayuda antes de continuar. Para este Challenge necesitamos Java y Git disponibles en el equipo.
+Si utilizan IntelliJ IDEA, pueden utilizar la terminal integrada del IDE para ejecutar el mismo comando.
+
+Si aparece una versión de Git, pueden continuar.
+
+> [!IMPORTANT]
+> Para este Challenge utilizaremos la opción **Run ▶️** del IDE para ejecutar Java.
+> La terminal se utilizará principalmente para trabajar con Git.
 
 ### Paso 3 · Copien el enlace del repositorio
 
