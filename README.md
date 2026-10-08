@@ -92,10 +92,10 @@ https://github.com/USUARIO/desarrollo-software-ii-challenge1.git
 En la terminal de VS Code, ubiquen una carpeta donde puedan guardar el proyecto. Luego ejecuten:
 
 ```bash
-git clone URL_REAL_DEL_REPOSITORIO
+git clone https://github.com/lclucumi/desarrollo-software-ii-challenge1.git
 ```
 
-Reemplacen `URL_REAL_DEL_REPOSITORIO` por la dirección copiada. Después ingresen a la carpeta:
+Después ingresen a la carpeta:
 
 ```bash
 cd desarrollo-software-ii-challenge1
