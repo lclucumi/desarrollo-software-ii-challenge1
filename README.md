@@ -91,8 +91,6 @@ La URL que utilizarán para este Challenge es:
 https://github.com/lclucumi/desarrollo-software-ii-challenge1.git
 ```
 
-`USUARIO` es un ejemplo: **utilicen la URL real** que les compartió la docente.
-
 ### Paso 4 · Clonen el proyecto
 
 En la terminal de VS Code, ubiquen una carpeta donde puedan guardar el proyecto. Luego ejecuten:
@@ -124,25 +122,29 @@ En el panel **Explorer** de VS Code, abran la carpeta `src` y revisen, en este o
 
 **Todavía no cambien nada.** Primero entiendan qué hace el código.
 
-### Paso 6 · Compilen y ejecuten
+### Paso 6 · Ejecuten el programa
 
-En la terminal, desde la **raíz del repositorio** (la carpeta que contiene `src`):
+Antes de modificar el código, comprueben que el proyecto inicial funciona.
 
-**Windows (PowerShell):**
+1. Abran el archivo:
 
-```powershell
-javac src\*.java
-java -cp src Main
+```text
+src/Main.java
 ```
 
-**macOS o Linux:**
+2. Localicen el método:
 
-```bash
-javac src/*.java
-java -cp src Main
+```java
+public static void main(String[] args)
 ```
 
-La salida esperada para el ejemplo inicial es:
+3. Ejecuten el programa utilizando la opción **Run ▶️** de su IDE.
+
+**Si utilizan Visual Studio Code:** normalmente encontrarán la opción **Run** sobre el método `main`.
+
+**Si utilizan IntelliJ IDEA:** pueden utilizar el botón verde **▶️** junto al método `main` y seleccionar **Run 'Main.main()'**.
+
+La salida esperada es:
 
 ```text
 Delivery assigned to motorcycle
@@ -150,8 +152,8 @@ Saving delivery...
 Notification sent. Cost: 15000.0
 ```
 
-> [!NOTE]
-> Si el programa no se ejecuta, comprueben que la terminal está ubicada en la carpeta del repositorio y que `javac --version` funciona. También pueden abrir `Main.java` y utilizar **Run** si VS Code tiene habilitado el soporte para Java.
+> [!IMPORTANT]
+> Si no aparece la opción **Run** o el programa no se ejecuta correctamente, soliciten ayuda antes de modificar el código.
 
 ## 3. Creen la rama de su pareja
 
@@ -273,8 +275,8 @@ compare: refactor/challenge1-parejaXX
 - ...
 
 ## Verificación
-- [ ] El proyecto compila.
-- [ ] El programa sigue funcionando.
+- [ ] El programa se ejecuta correctamente.
+- [ ] El comportamiento esperado se mantiene.
 ```
 
 Hagan clic en **Create pull request**. **No lo fusionen (`merge`).**
@@ -313,7 +315,7 @@ El commit nuevo aparecerá en el **mismo PR**. Si deciden no cambiar algo, expli
 
 ### Checklist
 
-- [ ] El proyecto compila y se ejecuta.
+- [ ] El proyecto se ejecuta correctamente.
 - [ ] Trabajamos en nuestra propia rama.
 - [ ] La solución responde a problemas concretos.
 - [ ] Los commits tienen nombres comprensibles.
