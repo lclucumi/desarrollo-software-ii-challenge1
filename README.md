@@ -79,10 +79,12 @@ Si alguno no funciona, pidan ayuda antes de continuar. Para este Challenge neces
 1. En GitHub, entren al repositorio de la actividad.
 2. Hagan clic en el botón verde **Code**.
 3. Seleccionen la pestaña **HTTPS**.
-4. Copien la URL que aparece. Tendrá un formato parecido a este:
+4. Copien la URL del repositorio.
+
+La URL que utilizarán para este Challenge es:
 
 ```text
-https://github.com/USUARIO/desarrollo-software-ii-challenge1.git
+https://github.com/lclucumi/desarrollo-software-ii-challenge1.git
 ```
 
 `USUARIO` es un ejemplo: **utilicen la URL real** que les compartió la docente.
