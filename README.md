@@ -338,7 +338,7 @@ El commit nuevo aparecerá en el **mismo PR**. Si deciden no cambiar algo, expli
 
 ---
 
-**Universidad del Valle · Desarrollo de Software II · 2026-2**
+**Universidad del Valle · Desarrollo de Software II · 2026-2**  
 Material académico preparado por la docente **Luz Carime Lucumí Hernández**.
 
 </div>
