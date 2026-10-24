@@ -11,7 +11,7 @@ public class Delivery {
     public double getDistance() {
         return distance;
     }
-
+ 
     public boolean isPriority() {
         return priority;
     }
