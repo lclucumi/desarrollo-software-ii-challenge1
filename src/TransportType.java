@@ -1,4 +1,4 @@
-public interface transportType {
+public interface TransportType {
 
     void deliveryAssigment();    
 } 

@@ -1,4 +1,4 @@
-public class bicycle implements transportType {
+public class Bicycle implements TransportType {
 
     @Override 
     public void deliveryAssigment(){
