@@ -11,7 +11,9 @@ public class Main {
 
         service.createDelivery(
             delivery,
-            "MOTORCYCLE"
+            new motorcycle()
         );
+
+        service.createDelivery(delivery, new car());
     }
 }
