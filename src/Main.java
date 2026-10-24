@@ -20,8 +20,8 @@ public class Main {
 
          Delivery delivery2 = new Delivery (
 
-             60,
-             false
+             5,
+             true 
 
              );
         
