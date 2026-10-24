@@ -256,27 +256,32 @@ compare: refactor/challenge1-parejaXX
 
 ```markdown
 ## Integrantes
-- Nombre completo — usuario de GitHub
-- Nombre completo — usuario de GitHub
+- Yilmar Mauricio Riascos Moreno - yilmar1212
+- Juan Esteban Martinez Orobio - JuanMartinez6723
+- Valentina Betancourt Caicedo - valvalwall
 
 ## Problemas identificados
-- ...
-
+- si se queria añadir un nuevo vehiculo se debia modificar la clase completa en deliveryservice
+- La asignación del tipo de transporte estaba acoplada a DeliveryService, por lo que agregar esa lógica allí mezclaba responsabilidades.
 ## Cambios realizados
-- ...
-
+- Se creó la clase TransportType para centralizar la asignación y los mensajes de los tipos de transporte disponibles: motocicleta, bicicleta y carro.
+- DeliveryService delega la asignación del transporte a esa clase.
+- Main también utiliza TransportType para asignar un transporte
 ## Justificación técnica
-- ...
+- Separar la asignación del transporte de la lógica de entregas mejora la organización y facilita el mantenimiento.
+- La modificación aplica separación de responsabilidades, aunque agregar un nuevo tipo todavía requiere modificar el switch de TransportType
 
 ## Conceptos de clase utilizados
-- ...
+- Refactorizacion
+- Conceptos SOLID 
 
 ## Posibles costos o trade-offs
-- ...
+- La clase TransportType depende de cadenas de texto; un error en el valor puede hacer que el tipo no se reconozca.
+- La lógica de asignación sigue requiriendo cambios en el switch para incorporar nuevos transportes. 
 
 ## Verificación
-- [ ] El programa se ejecuta correctamente.
-- [ ] El comportamiento esperado se mantiene.
+- [x] El programa se ejecuta correctamente.
+- [x] El comportamiento esperado se mantiene.
 ```
 
 Hagan clic en **Create pull request**. **No lo fusionen (`merge`).**
@@ -315,17 +320,17 @@ El commit nuevo aparecerá en el **mismo PR**. Si deciden no cambiar algo, expli
 
 ### Checklist
 
-- [ ] El proyecto se ejecuta correctamente.
-- [ ] Trabajamos en nuestra propia rama.
-- [ ] La solución responde a problemas concretos.
-- [ ] Los commits tienen nombres comprensibles.
-- [ ] El PR está dirigido a `main`.
-- [ ] El PR identifica a ambos integrantes.
-- [ ] La descripción justifica las decisiones.
-- [ ] El Reviewer dejó un comentario técnico.
-- [ ] El Author respondió y ajustó si correspondía.
-- [ ] El PR **permanece abierto** (sin merge).
-- [ ] Copiamos y entregamos el enlace.
+- [x] El proyecto se ejecuta correctamente.
+- [x] Trabajamos en nuestra propia rama.
+- [x] La solución responde a problemas concretos.
+- [x] Los commits tienen nombres comprensibles.
+- [x] El PR está dirigido a `main`.
+- [x] El PR identifica a ambos integrantes.
+- [x] La descripción justifica las decisiones.
+- [x] El Reviewer dejó un comentario técnico.
+- [x] El Author respondió y ajustó si correspondía.
+- [x] El PR **permanece abierto** (sin merge).
+- [x] Copiamos y entregamos el enlace.
 
 ---
 

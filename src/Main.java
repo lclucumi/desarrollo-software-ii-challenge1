@@ -10,8 +10,11 @@ public class Main {
         DeliveryService service = new DeliveryService();
 
         service.createDelivery(
-            delivery,
-            "MOTORCYCLE"
+            delivery
         );
+
+        TransportType transport = new TransportType();
+        transport.assignTransport(
+            "CAR");
     }
 }
