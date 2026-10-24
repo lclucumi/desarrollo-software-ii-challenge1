@@ -11,7 +11,7 @@ public class Main {
 
         service.createDelivery(
             delivery,
-            "MOTORCYCLE"
+            TransportType.MOTORCYCLE
         );
     }
 }
