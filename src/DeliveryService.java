@@ -1,32 +1,16 @@
+
 public class DeliveryService {
+    private final DeliveryCostCalculator costCalculator;
 
-    public void createDelivery(
-            Delivery delivery,
-            String transportType
-    ) {
+    public DeliveryService(DeliveryCostCalculator costCalculator) {
+        this.costCalculator = costCalculator;
+    }
 
-        double cost = delivery.getDistance() * 2000;
+    public void createDelivery(Delivery delivery, TransportType transportType) {
+        double cost = costCalculator.calculate(delivery);
 
-        if (delivery.isPriority()) {
-            cost = cost + 5000;
-        }
-
-        if (transportType.equals("MOTORCYCLE")) {
-            System.out.println(
-                "Delivery assigned to motorcycle"
-            );
-        }
-
-        if (transportType.equals("BICYCLE")) {
-            System.out.println(
-                "Delivery assigned to bicycle"
-            );
-        }
-
+        System.out.println("Delivery assigned to " + transportType);
         System.out.println("Saving delivery...");
-
-        System.out.println(
-            "Notification sent. Cost: " + cost
-        );
+        System.out.println("Notification sent. Cost: " + cost);
     }
 }
