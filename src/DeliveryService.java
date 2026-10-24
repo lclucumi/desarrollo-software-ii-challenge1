@@ -1,8 +1,9 @@
+
 public class DeliveryService {
 
     public void createDelivery(
             Delivery delivery,
-            String transportType
+            Vehicles vehicle
     ) {
 
         double cost = delivery.getDistance() * 2000;
@@ -11,17 +12,7 @@ public class DeliveryService {
             cost = cost + 5000;
         }
 
-        if (transportType.equals("MOTORCYCLE")) {
-            System.out.println(
-                "Delivery assigned to motorcycle"
-            );
-        }
-
-        if (transportType.equals("BICYCLE")) {
-            System.out.println(
-                "Delivery assigned to bicycle"
-            );
-        }
+        vehicle.AsignarVehiculo();
 
         System.out.println("Saving delivery...");
 
@@ -30,3 +21,6 @@ public class DeliveryService {
         );
     }
 }
+/*  En DeliveryService se llama a vehicle.AsignarVheicle el cual como se dijo anteriormente
+    llama el nombre dle vehiculo asignado y genera el mensage de asignacion
+     */
