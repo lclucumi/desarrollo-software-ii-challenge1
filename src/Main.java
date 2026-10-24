@@ -7,11 +7,14 @@ public class Main {
             true
         );
 
-        DeliveryService service = new DeliveryService();
+        DeliveryService service = new DeliveryService(
+            new DeliveryCostCalculator()
+        );
 
         service.createDelivery(
             delivery,
-            "MOTORCYCLE"
+            TransportType.AUTOMOBILE
         );
+        
     }
 }
