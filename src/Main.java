@@ -15,7 +15,6 @@ public class Main {
 
         TransportType transport = new TransportType();
         transport.assignTransport(
-            "MOTORCYCLE");
-        
+            "CAR");
     }
 }

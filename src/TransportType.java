@@ -8,6 +8,10 @@ public class TransportType {
             case "BICYCLE" -> System.out.println(
                         "Delivery assigned to bicycle"
                 );
+            
+            case "CAR" -> System.out.println(
+                        "Delivery assigned to car"
+                );
             default -> System.out.println(
                         "Unknown transport type"
                 );
