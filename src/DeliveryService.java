@@ -1,32 +1,32 @@
 public class DeliveryService {
 
+    private static final double COST_PER_KM = 2000;
+    private static final double PRIORITY_RATE = 0.25;
+
     public void createDelivery(
             Delivery delivery,
-            String transportType
+            TransportType transportType
     ) {
 
-        double cost = delivery.getDistance() * 2000;
+        double cost = calculateCost(delivery);
 
-        if (delivery.isPriority()) {
-            cost = cost + 5000;
-        }
-
-        if (transportType.equals("MOTORCYCLE")) {
-            System.out.println(
-                "Delivery assigned to motorcycle"
-            );
-        }
-
-        if (transportType.equals("BICYCLE")) {
-            System.out.println(
-                "Delivery assigned to bicycle"
-            );
-        }
+        System.out.println(
+            transportType.getMessage()
+        );
 
         System.out.println("Saving delivery...");
 
         System.out.println(
             "Notification sent. Cost: " + cost
         );
+    }
+
+    private double calculateCost(Delivery delivery) {
+        double baseCost = delivery.getDistance() * COST_PER_KM;
+        if (delivery.isPriority()) {
+            return baseCost + (baseCost * PRIORITY_RATE);
+        }
+
+        return baseCost;
     }
 }
