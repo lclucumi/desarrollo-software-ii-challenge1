@@ -15,3 +15,7 @@ En el archivo de java.main implementamos varias series de pruebas con carro, mot
 
 el mayor costo seria entender la clase general de vehiculo y como los demas usean el @override para entender que sobrescribre el meotdo devolviendo el nombre de su clase.
 por las demas cosas no tendrian dificultades en entender mi solcuion.
+
+
+Pablo Nicolas Marin Gonzalez 2459440
+Kevin Steven Rico Gonzalez 2411024
