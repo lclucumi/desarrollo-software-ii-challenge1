@@ -7,11 +7,10 @@ public class Main {
             true
         );
 
-        DeliveryService service = new DeliveryService();
-
-        service.createDelivery(
-            delivery,
-            "MOTORCYCLE"
+        DeliveryService service = new DeliveryService(
+            new motorcicle()
         );
+
+        service.createDelivery(delivery);
     }
 }
