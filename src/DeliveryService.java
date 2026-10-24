@@ -9,7 +9,7 @@ public class DeliveryService {
         double cost = delivery.getDistance() * 2000;
 
         if (delivery.isPriority()) {
-            cost = cost + 5000;
+            cost = cost * 1.25;
         }
 
         transporte.deliveryAssigment();
