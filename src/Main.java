@@ -2,16 +2,25 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Delivery delivery = new Delivery(
-            5.0,
-            true
+        DeliveryService service = new DeliveryService(
+            new DistanceCostCalculator()
         );
 
-        DeliveryService service = new DeliveryService();
+        Transport[] transports = {
+            new Motorcycle(), new Bicycle(), new Car()
+        };
 
-        service.createDelivery(
-            delivery,
-            "MOTORCYCLE"
-        );
+      
+        for (Transport transport : transports) {
+
+            System.out.println("--- Prioritario, 5 km ---");
+            service.createDelivery(new Delivery(5.0, true), transport);
+
+            System.out.println("--- No prioritario, 5 km ---");
+            service.createDelivery(new Delivery(5.0, false), transport);
+
+            System.out.println();
+        }
     }
 }
+

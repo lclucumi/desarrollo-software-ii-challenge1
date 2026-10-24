@@ -1,27 +1,20 @@
 public class DeliveryService {
 
+    private final CostCalculator costCalculator;
+
+    public DeliveryService(CostCalculator costCalculator) {
+        this.costCalculator = costCalculator;
+    }
+
     public void createDelivery(
             Delivery delivery,
-            String transportType
+            Transport transport
     ) {
 
-        double cost = delivery.getDistance() * 2000;
+        double cost = costCalculator.calculate(delivery);
 
-        if (delivery.isPriority()) {
-            cost = cost + 5000;
-        }
-
-        if (transportType.equals("MOTORCYCLE")) {
-            System.out.println(
-                "Delivery assigned to motorcycle"
-            );
-        }
-
-        if (transportType.equals("BICYCLE")) {
-            System.out.println(
-                "Delivery assigned to bicycle"
-            );
-        }
+        
+        transport.assign();
 
         System.out.println("Saving delivery...");
 
@@ -30,3 +23,10 @@ public class DeliveryService {
         );
     }
 }
+
+
+/*  logramos identificar que el codigo no esta cumpliendo con el 
+principio SRP de SOLID, ya que en esta clase se esta encargando de hacer mas de una cosa a la vez
+primero calcula y asigna los costos del envio, y luego asi asigna el vehiculo
+y manda la notificacion de que se ha guardado el envio, 
+lo cual deberia estar en otra clase, ya que esta clase deberia encargarse solo  calcular el costo del envio. */
