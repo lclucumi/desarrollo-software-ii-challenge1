@@ -8,10 +8,11 @@ public class DeliveryService {
 
     public void createDelivery(Delivery delivery) {
 
-        double cost = delivery.getDistance() * 2000;
+        double baseCost = delivery.getDistance() * 2000;
+        double cost = baseCost;
 
         if (delivery.isPriority()) {
-            cost = cost + 5000;
+            cost = baseCost * 1.25;
         }
 
         deliveryTransport.transportType();
