@@ -1,27 +1,10 @@
 public class DeliveryService {
 
-    public void createDelivery(
-            Delivery delivery,
-            String transportType
-    ) {
+    public void createDelivery (TransportType transportType, TransportCost transportCost, Delivery delivery) {
 
-        double cost = delivery.getDistance() * 2000;
+        double cost = transportCost.cost(delivery);
 
-        if (delivery.isPriority()) {
-            cost = cost + 5000;
-        }
-
-        if (transportType.equals("MOTORCYCLE")) {
-            System.out.println(
-                "Delivery assigned to motorcycle"
-            );
-        }
-
-        if (transportType.equals("BICYCLE")) {
-            System.out.println(
-                "Delivery assigned to bicycle"
-            );
-        }
+        transportType.assignedTransport();
 
         System.out.println("Saving delivery...");
 
