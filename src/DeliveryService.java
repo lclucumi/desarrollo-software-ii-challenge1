@@ -8,12 +8,7 @@ public class DeliveryService {
             TransportType transportType
     ) {
 
-        double baseCost = delivery.getDistance() * COST_PER_KM;
-        double cost = baseCost;
-
-        if (delivery.isPriority()) {
-            cost = baseCost + (baseCost * PRIORITY_RATE);
-        }
+        double cost = calculateCost(delivery);
 
         System.out.println(
             transportType.getMessage()
@@ -24,5 +19,14 @@ public class DeliveryService {
         System.out.println(
             "Notification sent. Cost: " + cost
         );
+    }
+
+    private double calculateCost(Delivery delivery) {
+        double baseCost = delivery.getDistance() * COST_PER_KM;
+        if (delivery.isPriority()) {
+            return baseCost + (baseCost * PRIORITY_RATE);
+        }
+
+        return baseCost;
     }
 }
