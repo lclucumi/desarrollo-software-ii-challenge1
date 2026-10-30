@@ -9,9 +9,6 @@ public class Main {
 
         DeliveryService service = new DeliveryService();
 
-        service.createDelivery(
-            delivery,
-            "MOTORCYCLE"
-        );
+        service.createDelivery(delivery, new Motorcycle());
     }
 }
